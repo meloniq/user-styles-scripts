@@ -21,12 +21,12 @@
 	}
 	gist_add_expand_links();
 
-	jQuery(document).ajaxComplete( function() { 
+	jQuery(document).ajaxComplete( function() {
 		gist_add_expand_links();
 	});
 
 	$(document).on('click', '.gist-expand', function() {
-	   $(this).closest('.gist-item').toggleClass('expand');
-	   return false;
+		$(this).closest('.gist-item').toggleClass('expand');
+		return false;
 	});
 }(unsafeWindow.jQuery));
