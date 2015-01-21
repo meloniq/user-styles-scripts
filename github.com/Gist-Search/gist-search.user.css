@@ -1,0 +1,94 @@
+@-moz-document regexp("https://gist\.github\.com/search.*") {
+
+/*
+	==UserStyle==
+	Style Name:  GitHub Gist - Collapse-Expand Code in Search
+	Style URI:   https://github.com/meloniq/user-styles-scripts/tree/master/github.com/Gist-Search
+	Description: GitHub Gist - Collapse-Expand Code in Search
+	Author:      meloniq
+	Author URI:  http://blog.meloniq.net
+	License:     GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Version:     1.0
+	==/UserStyle==
+*/
+
+.gist-item .file-box > .file-data {
+	height: auto;
+	max-height: 200px;
+	overflow: scroll;
+	position: relative;
+}
+
+.gist-item.expand .file-box > .file-data {
+	max-height: 100%;
+}
+
+.gist-item a.gist-expand span {
+	border: 1px solid #666666;
+	border-radius: 3px;
+	color: #666666;
+	opacity: 0.5;
+	padding: 3px 6px 2px;
+}
+
+.gist-item a.gist-expand:hover span {
+	opacity: 1;
+}
+
+.gist-item a.gist-expand {
+	color: #b9b9b9;
+	display: inline-block;
+	margin: 0;
+	font-size: 11px;
+	font-weight: 300;
+	text-align: right;
+	text-shadow: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	position: absolute;
+	right: 0;
+	top: -20px;
+}
+
+.gist-item a.gist-expand:hover ~a {
+	visibility: hidden !important;
+}
+
+.gist-item a.gist-expand:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+.gist-item .file-box > .file-data > .file-data {
+	height: auto;
+	overflow: visible;
+}
+
+.file-data pre, .line-data {
+	display: inline-block;
+}
+
+.file-data table {
+	width: 100%;
+}
+
+.gist-item .bubble:hover {
+	cursor: auto;
+}
+
+.link-overlay {
+	height: auto;
+	right: 16px;
+	width: auto;
+}
+
+.link-overlay .link {
+	display: inline-block;
+	margin: 0;
+	position: relative;
+	right: 0;
+	top: 0;
+}
+
+}
